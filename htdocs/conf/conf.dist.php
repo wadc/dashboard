@@ -32,62 +32,37 @@ $pgbouncer_cluster_arr = array(
  * URLs don't have to redirect to other dashboard pages, use them to go to 
  * external sites too! Want to add a link to the Hadoop DFS page? Easy!
  */
-
 $CONF_TABS = array(
 	'DB_TABS' => array(
-	    'PGBouncer' => 'examples/example_pgbouncer.php',
-	    'PostgreSQL Queries' => 'examples/example_postgresql_queries.php',
+	    'PGBouncer' => '/examples/example_pgbouncer.php',
+	    'PostgreSQL Queries' => '/examples/example_postgresql_queries.php',
 	),
 	'DEPLOY_TABS' => array(
-	    'FITB' => 'examples/example_fitb.php',
-	    'New Relic' => 'examples/example_newrelic.php',
+	    'FITB' => '/examples/example_fitb.php',
+	    'New Relic' => '/examples/example_newrelic.php',
 	),
 	'HADOOP_TABS' => array(
-	    'Overview' => 'examples/example_hadoop/overview.php',
-	    'DFS' => 'examples/example_hadoop/dfs.php',
-	    'Jobs' => 'examples/example_hadoop/jobs.php',
-	    'Java Process Metrics' => 'examples/example_hadoop/java_process.php',
-	    'HBase' => 'examples/example_hadoop/hbase.php',
+	    'Overview' => '/examples/example_hadoop/overview.php',
+	    'DFS' => '/examples/example_hadoop/dfs.php',
+	    'Jobs' => '/examples/example_hadoop/jobs.php',
+	    'Java Process Metrics' => '/examples/example_hadoop/java_process.php',
+	    'HBase' => '/examples/example_hadoop/hbase.php',
 	),
 	'NETWORK_TABS' => array(
-	    'FITB' => 'examples/example_fitb.php',
-	    'Netstat' => 'examples/example_netstat.php',
-	    'Mem info' => 'examples/example_meminfo.php',
+	    'FITB' => '/examples/example_fitb.php',
+	    'Netstat' => '/examples/example_netstat.php',
+	    'Mem info' => '/examples/example_meminfo.php',
 	),
 	'TIME_TABS' => array(
-	    'Time' => 'examples/example_time.php',
+	    'Time' => '/examples/example_time.php',
 	),
 );
-/*
-	public static $DB_TABS = array(
-	    'PGBouncer' => 'examples/example_pgbouncer.php',
-	    'PostgreSQL Queries' => 'examples/example_postgresql_queries.php',
-	);
 
-	public static $DEPLOY_TABS = array(
-	    'FITB' => 'examples/example_fitb.php',
-	    'New Relic' => 'examples/example_newrelic.php',
-	);
-
-	public static $HADOOP_TABS = array(
-	    'Overview' => 'examples/example_hadoop/overview.php',
-	    'DFS' => 'examples/example_hadoop/dfs.php',
-	    'Jobs' => 'examples/example_hadoop/jobs.php',
-	    'Java Process Metrics' => 'examples/example_hadoop/java_process.php',
-	    'HBase' => 'examples/example_hadoop/hbase.php',
-	);
-
-	public static $NETWORK_TABS = array(
-	    'FITB' => 'examples/example_fitb.php',
-	    'Netstat' => 'examples/example_netstat.php',
-	    'Mem info' => 'examples/example_meminfo.php',
-	);
-
-	public static $TIME_TABS = array(
-	    'Time' => 'examples/example_time.php',
-	);
-*/
-
+/** The $CONF_SECTIONS array defines the layout of the main index page
+ *  Top level keys define a named section
+ *  Each section key has an array of the format Group Title => array of group links
+ *  The array of group links can be specified explicitly or re-used from the $CONF_TABS by specifying one of the keys
+ */
 $CONF_SECTIONS = array(
 	'Application' => array(
 	    'Deploy' => 'DEPLOY_TABS',

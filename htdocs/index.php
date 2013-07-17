@@ -1,6 +1,6 @@
 <?php
-require_once('/conf/conf.php');
-require_once('/phplib/Dashboard.php');
+require_once($_SERVER['DOCUMENT_ROOT'] . '/conf/conf.php');
+require_once($_SERVER['DOCUMENT_ROOT'] . '/phplib/Dashboard.php');
 $dasboard = new Dashboard;
 $sections = array();
 foreach ($CONF_SECTIONS as $section_title => $dashboard_groups) {
@@ -14,20 +14,6 @@ foreach ($CONF_SECTIONS as $section_title => $dashboard_groups) {
     }
 }
 
-// $sections = array(
-//     'Application' => array(
-//         'Deploy' => Dashboard::$DEPLOY_TABS,
-//     ),
-//     'Operations' => array(
-//         'Database' => Dashboard::$DB_TABS,
-//         'Network' => Dashboard::$NETWORK_TABS,
-//         'Chef' => array(
-//             'chef' => '/example_chef.php',
-//         ),
-//         'Hadoop' => Dashboard::$HADOOP_TABS,
-//         'Util' => Dashboard::$TIME_TABS,
-//     ),
-// );
 ?>
 <!DOCTYPE html>
 <html>
