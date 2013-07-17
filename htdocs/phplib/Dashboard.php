@@ -29,17 +29,15 @@ class Dashboard {
      * URLs don't have to redirect to other dashboard pages, use them to go to 
      * external sites too! Want to add a link to the Hadoop DFS page? Easy!
      */
-    
-    public function __get($param) {
+
+    public static function MyStaticInit() {
+        //this is the static constructor
+        //because in a function, everything is allowed, including initializing using other functions
         global $CONF_TABS;
-        if (isset($CONF_TABS[$param])) {
-            return $CONF_TABS[$param];
-        }
-        else {
-            return null;
+        foreach ($CONF_TABS as $tab_var_name => $tab_array) {
+            self::$$tab_var_name = $tab_array;
         }
     }
-
     // public static $DB_TABS = array(
     //     'PGBouncer' => 'example_pgbouncer.php',
     //     'PostgreSQL Queries' => 'example_postgresql_queries.php',
