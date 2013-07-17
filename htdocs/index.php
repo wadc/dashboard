@@ -1,20 +1,32 @@
 <?php
 require_once('phplib/Dashboard.php');
+require_once('conf/conf.php');
 
-$sections = array(
-    'Application' => array(
-        'Deploy' => Dashboard::$DEPLOY_TABS,
-    ),
-    'Operations' => array(
-        'Database' => Dashboard::$DB_TABS,
-        'Network' => Dashboard::$NETWORK_TABS,
-        'Chef' => array(
-            'chef' => '/example_chef.php',
-        ),
-        'Hadoop' => Dashboard::$HADOOP_TABS,
-        'Util' => Dashboard::$TIME_TABS,
-    ),
-);
+$sections = array();
+foreach ($CONF_SECTIONS as $section_title => $dashboard_groups) {
+    foreach ($dashboard_groups as $dashboard_group_title => $dashboards_value) {
+        if (!is_array($dashboards_value) and array_key_exists($dashboards_value, $CONF_TABS)) {
+            $sections[$section_title] = array($dashboard_group_title => Dashboard::${$dashboards_value});
+        }
+        else {
+            $sections[$section_title] = array($dashboard_group_title => $dashboards_value);
+        }
+    }
+}
+// $sections = array(
+//     'Application' => array(
+//         'Deploy' => Dashboard::$DEPLOY_TABS,
+//     ),
+//     'Operations' => array(
+//         'Database' => Dashboard::$DB_TABS,
+//         'Network' => Dashboard::$NETWORK_TABS,
+//         'Chef' => array(
+//             'chef' => '/example_chef.php',
+//         ),
+//         'Hadoop' => Dashboard::$HADOOP_TABS,
+//         'Util' => Dashboard::$TIME_TABS,
+//     ),
+// );
 ?>
 <!DOCTYPE html>
 <html>
