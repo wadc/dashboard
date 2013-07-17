@@ -13,6 +13,7 @@ foreach ($CONF_SECTIONS as $section_title => $dashboard_groups) {
         }
     }
 }
+
 // $sections = array(
 //     'Application' => array(
 //         'Deploy' => Dashboard::$DEPLOY_TABS,
