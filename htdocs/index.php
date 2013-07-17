@@ -1,6 +1,6 @@
 <?php
-require_once('conf/conf.php');
-require_once('phplib/Dashboard.php');
+require_once('/conf/conf.php');
+require_once('/phplib/Dashboard.php');
 $dasboard = new Dashboard;
 $sections = array();
 foreach ($CONF_SECTIONS as $section_title => $dashboard_groups) {
