@@ -35,56 +35,56 @@ $pgbouncer_cluster_arr = array(
 
 $CONF_TABS = array(
 	'DB_TABS' => array(
-	    'PGBouncer' => 'example_pgbouncer.php',
-	    'PostgreSQL Queries' => 'example_postgresql_queries.php',
+	    'PGBouncer' => 'local/example_pgbouncer.php',
+	    'PostgreSQL Queries' => 'local/example_postgresql_queries.php',
 	),
 	'DEPLOY_TABS' => array(
-	    'FITB' => 'example_fitb.php',
-	    'New Relic' => 'example_newrelic.php',
+	    'FITB' => 'local/example_fitb.php',
+	    'New Relic' => 'local/example_newrelic.php',
 	),
 	'HADOOP_TABS' => array(
-	    'Overview' => 'example_hadoop/overview.php',
-	    'DFS' => 'example_hadoop/dfs.php',
-	    'Jobs' => 'example_hadoop/jobs.php',
-	    'Java Process Metrics' => 'example_hadoop/java_process.php',
-	    'HBase' => 'example_hadoop/hbase.php',
+	    'Overview' => 'local/example_hadoop/overview.php',
+	    'DFS' => 'local/example_hadoop/dfs.php',
+	    'Jobs' => 'local/example_hadoop/jobs.php',
+	    'Java Process Metrics' => 'local/example_hadoop/java_process.php',
+	    'HBase' => 'local/example_hadoop/hbase.php',
 	),
 	'NETWORK_TABS' => array(
-	    'FITB' => 'example_fitb.php',
-	    'Netstat' => 'example_netstat.php',
-	    'Mem info' => 'example_meminfo.php',
+	    'FITB' => 'local/example_fitb.php',
+	    'Netstat' => 'local/example_netstat.php',
+	    'Mem info' => 'local/example_meminfo.php',
 	),
 	'TIME_TABS' => array(
-	    'Time' => 'example_time.php',
+	    'Time' => 'local/example_time.php',
 	),
 );
 /*
 	public static $DB_TABS = array(
-	    'PGBouncer' => 'example_pgbouncer.php',
-	    'PostgreSQL Queries' => 'example_postgresql_queries.php',
+	    'PGBouncer' => 'local/example_pgbouncer.php',
+	    'PostgreSQL Queries' => 'local/example_postgresql_queries.php',
 	);
 
 	public static $DEPLOY_TABS = array(
-	    'FITB' => 'example_fitb.php',
-	    'New Relic' => 'example_newrelic.php',
+	    'FITB' => 'local/example_fitb.php',
+	    'New Relic' => 'local/example_newrelic.php',
 	);
 
 	public static $HADOOP_TABS = array(
-	    'Overview' => 'example_hadoop/overview.php',
-	    'DFS' => 'example_hadoop/dfs.php',
-	    'Jobs' => 'example_hadoop/jobs.php',
-	    'Java Process Metrics' => 'example_hadoop/java_process.php',
-	    'HBase' => 'example_hadoop/hbase.php',
+	    'Overview' => 'local/example_hadoop/overview.php',
+	    'DFS' => 'local/example_hadoop/dfs.php',
+	    'Jobs' => 'local/example_hadoop/jobs.php',
+	    'Java Process Metrics' => 'local/example_hadoop/java_process.php',
+	    'HBase' => 'local/example_hadoop/hbase.php',
 	);
 
 	public static $NETWORK_TABS = array(
-	    'FITB' => 'example_fitb.php',
-	    'Netstat' => 'example_netstat.php',
-	    'Mem info' => 'example_meminfo.php',
+	    'FITB' => 'local/example_fitb.php',
+	    'Netstat' => 'local/example_netstat.php',
+	    'Mem info' => 'local/example_meminfo.php',
 	);
 
 	public static $TIME_TABS = array(
-	    'Time' => 'example_time.php',
+	    'Time' => 'local/example_time.php',
 	);
 */
 
@@ -96,7 +96,7 @@ $CONF_SECTIONS = array(
 	    'Database' => 'DB_TABS',
 	    'Network' => 'NETWORK_TABS',
 	    'Chef' => array(
-	        'chef' => '/example_chef.php',
+	        'chef' => '/local/example_chef.php',
 	    ),
 	    'Hadoop' => 'HADOOP_TABS',
 	    'Util' => 'TIME_TABS',
