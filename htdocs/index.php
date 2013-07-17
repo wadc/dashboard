@@ -1,8 +1,10 @@
 <?php
 require_once('conf/conf.php');
 require_once('phplib/Dashboard.php');
-Dashboard::MyStaticInit();
-
+Dashboard::$MAIN_TABS = array(
+        'Overview' => '/main.php',
+    );
+exit;
 $sections = array();
 foreach ($CONF_SECTIONS as $section_title => $dashboard_groups) {
     foreach ($dashboard_groups as $dashboard_group_title => $dashboards_value) {

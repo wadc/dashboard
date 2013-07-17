@@ -30,14 +30,6 @@ class Dashboard {
      * external sites too! Want to add a link to the Hadoop DFS page? Easy!
      */
 
-    public static function MyStaticInit() {
-        //this is the static constructor
-        //because in a function, everything is allowed, including initializing using other functions
-        global $CONF_TABS;
-        foreach ($CONF_TABS as $tab_var_name => $tab_array) {
-            self::$$tab_var_name = $tab_array;
-        }
-    }
     // public static $DB_TABS = array(
     //     'PGBouncer' => 'example_pgbouncer.php',
     //     'PostgreSQL Queries' => 'example_postgresql_queries.php',
