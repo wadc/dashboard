@@ -2,7 +2,7 @@
 require_once('conf/conf.php');
 require_once('phplib/Dashboard.php');
 
-$dashboard = new Dashboard;
+$dashboard = new Dashboard();
 
 $sections = array();
 foreach ($CONF_SECTIONS as $section_title => $dashboard_groups) {
