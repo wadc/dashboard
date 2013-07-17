@@ -1,15 +1,12 @@
 <?php
 require_once('conf/conf.php');
 require_once('phplib/Dashboard.php');
-Dashboard::$MAIN_TABS = array(
-        'Overview' => '/main.php',
-    );
-exit;
+$dasboard = new Dashboard;
 $sections = array();
 foreach ($CONF_SECTIONS as $section_title => $dashboard_groups) {
     foreach ($dashboard_groups as $dashboard_group_title => $dashboards_value) {
         if (!is_array($dashboards_value) and array_key_exists($dashboards_value, $CONF_TABS)) {
-            $sections[$section_title] = array($dashboard_group_title => Dashboard::${$dashboards_value});
+            $sections[$section_title] = array($dashboard_group_title => $dasboard -> ${$dashboards_value});
         }
         else {
             $sections[$section_title] = array($dashboard_group_title => $dashboards_value);

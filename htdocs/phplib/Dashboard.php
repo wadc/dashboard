@@ -29,6 +29,16 @@ class Dashboard {
      * URLs don't have to redirect to other dashboard pages, use them to go to 
      * external sites too! Want to add a link to the Hadoop DFS page? Easy!
      */
+    
+    public function __get($param) {
+        global $CONF_TABS;
+        if (isset($CONF_TABS[$param])) {
+            return $CONF_TABS[$param];
+        }
+        else {
+            return null;
+        }
+    }
 
     // public static $DB_TABS = array(
     //     'PGBouncer' => 'example_pgbouncer.php',
