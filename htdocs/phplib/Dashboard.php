@@ -18,7 +18,7 @@ require_once('Graph/NewRelic.php');
 require_once('SplunkUtils.php');
 require_once('Tabs.php');
 require_once('TimingUtils.php');
-require_once('../conf/conf.php');
+require_once('./conf/conf.php');
 
 class Dashboard {
 
